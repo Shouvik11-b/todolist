@@ -7,12 +7,20 @@
     <title>weekday</title>
 </head>
 <body>
-    <% if (kindOfDay === "saturday" || kindOfDay === "sunday"){ %>
-        <h1 style="color: purple;">its a <%= kindOfDay %> !</h1>
-    <% }else{ %>
-        <h1 style="color: rgb(60, 0, 128);">its a <%= kindOfDay %> !</h1>
-
-    <% } %>
+    <%= kindOfDay %>
+    
+    <ul>
+        <li>buy</li>
+        <li>cook</li>
+        <li>eat</li>
+        <% for(var i=0;i<nameList.length;i++){ %>
+            <li><%= nameList[i] %></li>
+        <% } %>
+    </ul>
+    <form action="/" method="post">
+        <input type="text" name="newItem">
+        <button type="submit" name="button">add</button>
+    </form>
     
 </body>
 </html>
